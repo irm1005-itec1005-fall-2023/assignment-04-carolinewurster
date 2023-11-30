@@ -1,51 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<head>
-  <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <!-- Set the CSS Reset File -->
-  <link rel="stylesheet" href="./reset.css" />
-
-  <!-- Set the main stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
-
-  <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
-</head>
 <body>
+    <header>
+        <h1>DailyDo</h1>
+    </header>
 
-  <!--
+    <div class="container-enterTask">
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <button id="addTaskButton">Add Task</button>
+    </div>
 
-    Assignment 04 - Finishing a Todo List App
+    <div class="container-currentTasks">
+        <h2>To-Do List</h2>
+        <div id="tasksContainer" class="list-container"></div>
+        <div class="empty-state" id="emptyStateCurrent">
+            <img src="https://media.discordapp.net/attachments/1173477268752961557/1179636057973719181/emptyState.png?ex=657a80b0&is=65680bb0&hm=24bb5805ac61a87e7643c2d7315ec29c81dea537324aeb47a66bd6e58b76c30e&=&format=webp&quality=lossless&width=409&height=409" 
+            alt="Empty State Image">
+        </div>
+    </div>
 
-    Instructions:
+    <div class="container-completedTasks" class="list-container">
+        <h2>Completed Tasks</h2>
+        <div id="completedTasks" class="completed-container"></div>
+        <div class="empty-state" id="emptyStateCompleted">
+            <img src="https://media.discordapp.net/attachments/1173477268752961557/1179636057973719181/emptyState.png?ex=657a80b0&is=65680bb0&hm=24bb5805ac61a87e7643c2d7315ec29c81dea537324aeb47a66bd6e58b76c30e&=&format=webp&quality=lossless&width=409&height=409" 
+            alt="Empty State Image">
+        </div>
+    </div>
 
-    Important checklist:
-
-    - Are users able to create and delete to do list items?
-    - Have you set a favicon? (included - but it's a rocket)
-    - Has a team member conducted a code review and left a GitHub Issue in your repo?
-    - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-  -->
-
-  <main>
-    <div id="app"></div>
-  </main>
-
-  <!-- Add JavaScript File -->
-  <script src="./script.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>

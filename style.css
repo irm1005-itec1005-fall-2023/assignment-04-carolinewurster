@@ -1,56 +1,138 @@
-/*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
- */
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, rgb(255, 215, 253) 0%, rgb(255, 156, 215)) 35%, rgb(255, 0, 183)100%;  
+  margin: 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
+
+.container-enterTask {
+  max-width: 600px;
+  margin: 50px auto;
+  margin-bottom: -30px;
+  background-color: #b39bc8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.container-currentTasks {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #b39bc8;
+  margin-bottom: -30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.container-completedTasks{
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #b39bc8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2,h3 {
+  font-size: 25px;
+  color: #94dfff;
+}
+
+#taskInput {
+  width: 70%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#addTaskButton {
+  padding: 10px 15px;
+  background-color:#94dfff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addTaskButton:hover {
+  background-color: #3fc5ff;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.task:nth-child(odd) {
+  background-color: #94dfff;
+}
+
+.task:nth-child(even) {
+  background-color: #3fc5ff; 
+}
+
+.task-btn {
+  flex: 1;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+}
+
+.delete-btn {
+  background-color:#ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding:9px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right:5px;
+}
+
+.delete-btn:hover {
+  background-color: #aa3333;
+}
+.checkmark-btn {
+  background-color: #ffffff;
+  color: #3cba54;
+  border: none;
+  padding: 9px 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.checkmark-btn:hover {
+  background-color: #449944;
+}
+
+.task-content[contenteditable="true"]:focus {
+  outline: none;
+  border: 1px solid #aacbd4; 
+}
+
+.empty-state {
+  display: block; 
+  margin: 0 auto 0 10%; 
+  max-width: 40%; 
+  height: auto;
+  }
