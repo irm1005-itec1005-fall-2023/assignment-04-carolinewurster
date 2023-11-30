@@ -2,7 +2,6 @@ const addButton = document.getElementById('addTaskButton');
 const taskInput = document.getElementById('taskInput');
 const tasksContainer = document.getElementById('tasksContainer');
 const completedTasksContainer = document.getElementById('completedTasks');
-const emptyState = document.getElementById('emptyState');
 
 function createEditableTask(taskText) {
   const newTask = document.createElement("div");
@@ -25,6 +24,7 @@ function createEditableTask(taskText) {
     if (newTask.parentElement) {
       newTask.parentElement.removeChild(newTask);
       saveTasks();
+      toggleEmptyState();
     }
   };
 
@@ -60,11 +60,14 @@ function moveTaskToCompleted(taskElement) {
 }
 
 function toggleEmptyState() {
-  if (tasksContainer.children.length > 0 || completedTasksContainer.children.length > 0) {
-    emptyState.style.display = "none";
-  } else {
-    emptyState.style.display = "block";
-  }
+  const hasTasks = tasksContainer.children.length > 0;
+  const hasCompletedTasks = completedTasksContainer.children.length > 0;
+
+  const emptyStateCurrent = document.getElementById('emptyStateCurrent');
+  const emptyStateCompleted = document.getElementById('emptyStateCompleted');
+
+  emptyStateCurrent.style.display = hasTasks ? "none" : "block";
+  emptyStateCompleted.style.display = hasCompletedTasks ? "none" : "block";
 }
 
 addButton.addEventListener('click', () => {
