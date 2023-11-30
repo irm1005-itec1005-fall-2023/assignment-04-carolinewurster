@@ -131,8 +131,8 @@ h2,h3 {
 }
 
 .empty-state {
-  display:none;
-  margin:auto;
-  max-width: 25%;
+  display: block; 
+  margin: 0 auto 0 10%; 
+  max-width: 40%; 
   height: auto;
-}
+  }
